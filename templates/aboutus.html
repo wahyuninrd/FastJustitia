@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/about.css') }}">
+    <title>About Us</title>
+</head>
+<body>
+    <section class="themis-section">
+        <div class="container">
+            <!-- Navbar Start  -->
+            <nav class="nav-custom">
+                <div class="nav-right">
+                    <div class="nav-logo">
+                        <img src="{{url_for('static', filename='./img/Logo FJ.svg')}}" alt="">
+                    </div>
+                    <div class="nav-links-custom">
+                        <nav id="navbar" class="navbar">
+                            <ul>
+                                <li class="home"><a href="/home">Home</a></li>
+                                <li class="rocket"><a href="cari">Search<img src="{{url_for('static', filename='img/Rocket.svg')}}" alt="rocket"></a></li>
+                                <li class="about"><a href="about">About US</a></li>
+                            </ul>
+                            <i class="bi bi-list mobile-nav-toggle"></i>
+                        </nav><!-- .navbar -->
+        
+                    </div>
+                </div>
+            </nav>
+            <!-- Navbar End -->
+            <!-- Heading Start -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <h class="h-custom">
+                        Our Team
+                    </h>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="h1-custom">
+                        <img src="{{url_for('static', filename='./img/our Team.png')}}" alt="" class="img.our Team">
+                    </h1>
+                </div>               
+            </div>
+            <!-- Wighing End -->
+</body>
+</html>
