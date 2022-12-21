@@ -6,139 +6,55 @@
 
     <!-- Custom CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/AI_style.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-    <link rel="stylesheet" type="static" href="/styles/style.css" />
+    <link rel="stylesheet"href="{{ url_for('static', filename='styles/home.css') }}" />
     <!-- Responsive-->
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/responsive.css') }}">
     <title>FastJustitia</title>
   </head>
+<style>
+  h1.h1-custom{
+    position: absolute;
+    width: 342px;
+    height: 45px;
+    left: 777px;
+    top: 370px;
+    bottom: 100px;
+    color: white;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 45px;
+}
 
-  <style>
-    body {
-      background: linear-gradient(-150deg, #fce943, #aa2424, #000000);
-      background-size: cover;
-      height: 100%;
-      animation: gradient 15s ease infinite;
-    }
-    * {
-      text-decoration: none;
-    }
-    .logo {
-      margin: 25px;
-    }
-    .navbar {
-      margin: 40px;
-    }
-
-    .navbar ul {
-      margin-left: 1000px;
-      margin-top: -120px;
-      display: flex;
-      list-style: none;
-      align-items: center;
+p.p-secondary{
+    position: absolute;
+    width: 533px;
+    height: 209px;
+    left: 777px;
+    top: 400px;
+    color: white;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 60px;
+}
+</style>
   
-    }
-
-    .navbar li {
-      position: relative;
-    }
-
-    .navbar a,
-    .navbar a:focus {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 0 10px 30px;
-      font-size: 15px;
-      font-weight: 800;
-      color: #fff;
-      white-space: nowrap;
-      transition: 0.3s;
-    }
-
-    a.link-secondary {
-      text-decoration: none;
-      color: white;
-    }
-
-    .btn btn-primary {
-      background: rgb(252, 233, 67);
-      background: linear-gradient(130deg, rgba(252, 233, 67, 1) 48%, rgba(133, 121, 16, 1) 100%);
-      position: absolute;
-      width: 281px;
-      height: 60px;
-      left: 777px;
-      top: 631px;
-      font-size: 22px;
-      font-weight: bold;
-      color: white;
-      padding: 10px;
-      border-radius: 16px;
-      border: 0px solid;
-      transition: 0.3s ease-out;
-    }
-
-    button.btn-primary-custom:hover {
-      transform: scale(1.02);
-      transition: 0.3s ease-in;
-      box-shadow: 10px 8px 20px rgba(0, 0, 0, 0.25);
-    }
-    /* Heading & Paragraph */
-
-    h1.h1-custom {
-      position: absolute;
-      width: 332px;
-      height: 45px;
-      left: 880px;
-      padding-top: 320px;
-    
-      color: white;
-      font-family: "Poppins";
-      font-style: normal;
-      font-weight: 600;
-      font-size: 20px;
-      line-height: 45px;
-    }
-    p.p-secondary {
-      position: absolute;
-      padding-top: 350px;
-      width: 533px;
-
-      left: 877px;
-
-      color: white;
-      font-family: "Poppins";
-      font-style: normal;
-      font-weight: 900;
-      font-size: 30px;
-      line-height: 50px;
-    }
-    .row {
-     
-      margin-right: 590px;
-      margin-top:-400px;
-
-    }
-    .col-lg-0{
-      margin-bottom: 250px;
-      margin-top: 350px;
-    }
-    img.img-themis{
-      margin-left: 50px;
-      margin-top: 30px;
-    }
-  </style>
 
   <body>
         <header id="header" class="fixed-top">
           <div>
-              <div class="logo">
-                  <img src="{{url_for('static', filename='img/Logo FJ.svg')}}" alt="Logo">
-              </div>
+             
               <nav id="navbar" class="navbar">
+                <div class="logo">
+                  <img src="{{url_for('static', filename='img/Logo FJ.svg')}}" alt="Logo">
+                </div>
                   <ul>
-                      <li class="home"><a href="/home">Home</a></li>
-                      <li class="rocket"><a href="page">Search<img src="{{url_for('static', filename='img/Rocket.svg')}}" alt="rocket"></a></li>
-                      <li class="about"><a href="">About US</a></li>
+                      <li class="home"><a href="#">Home</a></li>
+                      <li class="rocket"><a href="cari">Search<img src="{{url_for('static', filename='img/Rocket.svg')}}" alt="rocket"></a></li>
+                      <li class="about"><a href="about">About US</a></li>
                   </ul>
                   <i class="bi bi-list mobile-nav-toggle"></i>
               </nav><!-- .navbar -->
@@ -150,7 +66,7 @@
             <h1 class="h1-custom">Halo, selamat datang!</h1>
             <p class="p-secondary mt-3">
               Tentukan keadilan dengan cepat dan sederhana!
-              <br /> <a href="/page">
+              <br /> <a href="cari">
                 <button
                   class="btn btn-primary"
                   style="
@@ -174,7 +90,7 @@
           </div>
         </div>
           <div>
-            <img src="{{url_for('static', filename='img/themis.png')}}" width="950" height="650" class="img-themis" />
+            <img src="{{url_for('static', filename='img/themis.png')}}" width="1050" height="750" style="margin-left:80px;" class="img-themis" />
           </div>
         
         <!-- Themis End -->

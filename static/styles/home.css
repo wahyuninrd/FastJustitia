@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body, hhtml{
+	background: linear-gradient(-150deg, #FCE943, #aa2424, #000000);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+    max-width: 100%;
+    overflow-x: hidden;
+	
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+*{
+    text-decoration: none;
+    font-family: 'Poppins';
+}
+
+/* Navbar */
+  
+  .navbar ul {
+    margin-left: 1090px;
+
+    margin-top: -90px;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    width: 364px;
+   
+  }
+  
+  .navbar li {
+    position: relative;
+ 
+  }
+  
+  .navbar a,
+  .navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 10px 30px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+
+nav.nav-custom{
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    position: relative;
+    z-index: inherit;
+}
+
+.nav-right{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links-custom{
+    width: 25%;
+    display:  flex;
+    justify-content: space-between;
+}
+
+a.link-secondary{
+    text-decoration: none;
+    color:white;
+}
+
+.btn btn-primary{
+    background: rgb(252,233,67);
+    background: linear-gradient(130deg, rgba(252,233,67,1) 48%, rgba(133,121,16,1) 100%);
+    position: absolute;
+    width: 281px;
+    height: 60px;
+    left: 777px;
+    top: 631px;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    border-radius: 16px;
+    border: 0px solid;
+    transition: 0.3s ease-out;
+}
+@media (max-width: 1366px) {
+    .navbar .dropdown .dropdown ul {
+      left: -90%;
+    }
+
+button.btn-primary-custom:hover{
+    transform: scale(1.02);
+    transition: 0.3s ease-in;
+    box-shadow: 10px 8px 20px rgba(0, 0, 0, 0.25);
+}
+/* Heading & Paragraph */
+
+
+.row{
+    margin-top: -120px;
+    
+}
+#header .logo img {
+    max-height: 90px;
+  }
+
+  .logo{
+    position: absolute;
+    width: 255px;
+    height: 76px;
+    left: 70px;
+    top: 10px;
+  }
+}
